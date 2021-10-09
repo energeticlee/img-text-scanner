@@ -8,9 +8,11 @@ import style from "../css/Home.module.css";
 const Home: FC<IHomeProps> = ({ setImgTextArr }) => {
   const history = useHistory();
   const [progress, setProgress] = useState<string>(`0%`);
+  const [scanOngoing, setScanOngoing] = useState<boolean>(false);
 
   const handleScan = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setScanOngoing(true);
 
     let imgArr: IimgArr[] = [];
     const files = event.currentTarget.imgFiles.files;
@@ -39,10 +41,14 @@ const Home: FC<IHomeProps> = ({ setImgTextArr }) => {
       <form onSubmit={(e) => handleScan(e)} className={style.forms}>
         <label>Upload files (Support multiple input)</label>
         <input type="file" name="imgFiles" multiple className={style.input} />
-        <button type="submit">Scan</button>
+        <button type="submit" disabled={scanOngoing}>
+          Scan
+        </button>
       </form>
       <div className={style.progressBarContainer}>
-        <p className={style.progressBarText}>Progress Bar</p>
+        <p className={style.progressBarText}>
+          {scanOngoing ? "Scanning..." : "Progress Bar"}
+        </p>
         <div className={style.progressBar}>
           <div className={style.progressLevel} style={{ width: progress }} />
         </div>

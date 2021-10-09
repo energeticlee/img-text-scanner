@@ -35,18 +35,17 @@ const Home: FC<IHomeProps> = ({ setImgTextArr }) => {
   };
 
   return (
-    <div>
-      <div>
-        <form onSubmit={(e) => handleScan(e)}>
-          <label>Upload files (Support multiple input)</label>
-          <input type="file" name="imgFiles" multiple />
-          <div>
-            <button type="submit">Scan</button>
-          </div>
-        </form>
-      </div>
-      <div className={style.progressBar}>
-        <div className={style.progressLevel} style={{ width: progress }} />
+    <div className={style.mainContainer}>
+      <form onSubmit={(e) => handleScan(e)} className={style.forms}>
+        <label>Upload files (Support multiple input)</label>
+        <input type="file" name="imgFiles" multiple className={style.input} />
+        <button type="submit">Scan</button>
+      </form>
+      <div className={style.progressBarContainer}>
+        <p className={style.progressBarText}>Progress Bar</p>
+        <div className={style.progressBar}>
+          <div className={style.progressLevel} style={{ width: progress }} />
+        </div>
       </div>
     </div>
   );

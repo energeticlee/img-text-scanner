@@ -1,12 +1,15 @@
 # IMG Text Scanner
 
-## Problem
+## Scenario
+Employee leaving the company but want to export personal images from a company computer.
 
-- Employees might store personal images on the company computer.
-- When the employee leaves, the company got to make sure there are no sensitive documents. This web app aims to utilise optical character recognition to detect any text in an image. This will significantly reduce the time to go through all the unnecessary images (i.e. selfies and cat images).
+## Problem
+HR has to go through a large number of images to ensure no sensitive document is leaked.
+
+## Solution
+This application flag images that might contain sensitive information.
 
 ## How to use
-
 - Upload images, click scan and wait.
 - Once done, images that was flag will be displayed on the screen.
 

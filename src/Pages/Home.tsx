@@ -56,6 +56,10 @@ const Home: FC<IHomeProps> = ({ setImgTextArr }) => {
           <label className={style.label}>
             <h1 className={style.labelText}>Upload files</h1>
             <h2 className={style.labelDescription}>(Support multiple input)</h2>
+            <p style={{ color: "white", fontSize: "1rem" }}>
+              This application flag images that might contain sensitive
+              information.
+            </p>
           </label>
           <UploadButton
             handleInputChange={handleInputChange}

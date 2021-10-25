@@ -1,5 +1,5 @@
 export interface IimgArr {
-  index: number | string;
+  index: string;
   text: string;
   fileName: string;
   image: string;

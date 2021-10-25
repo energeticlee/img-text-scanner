@@ -1,0 +1,30 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.text {
+  max-height: 100px;
+  overflow: hidden;
+  font-size: 1.2rem;
+}
+
+.cardWrapper {
+  margin: 10px 0;
+  border: 10px solid black;
+}

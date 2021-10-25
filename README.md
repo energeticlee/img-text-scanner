@@ -9,3 +9,6 @@
 
 - Upload images, click scan and wait.
 - Once done, images that was flag will be displayed on the screen.
+
+## Link
+[Link to vercel website](https://img-text-scanner.vercel.app)
